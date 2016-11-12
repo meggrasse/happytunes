@@ -6,6 +6,8 @@ var http = require('http');
 var express = require('express');
 var twilio = require('twilio');
 
+app.set('port', (process.env.PORT || 5000));
+
 var app = express();
 
 var phonenumber = '';
@@ -44,6 +46,6 @@ app.post('/makecall', function(req, res) {
 	})
 });
 
-http.createServer(app).listen(1337, function () {
-	console.log("Express server listening on port 1337");
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
