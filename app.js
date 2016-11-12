@@ -33,7 +33,7 @@ app.post('/getnumber', function(req, res) {
 
 app.post('/makecall', function(req, res) {
 	client.calls.create({
-    	url: "https://41d9726b.ngrok.io/inbound",
+    	url: "https://frozen-inlet-59360.herokuapp.com/inbound",
     	to: phonenumber,
     	from: "+12678634319"
     }, function(err, call) {
