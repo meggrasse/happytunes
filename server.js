@@ -6,11 +6,10 @@ var http = require('http');
 var express = require('express');
 var twilio = require('twilio');
 
-app.set('port', (process.env.PORT || 5000));
-
 var app = express();
-
 var phonenumber = '';
+
+app.set('port', (process.env.PORT || 5000));
 
 app.post('/sms', function(req, res) {
 	console.log("here")
